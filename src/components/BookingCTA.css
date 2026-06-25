@@ -1,0 +1,121 @@
+/* ============================================
+   BOOKING CTA SECTION
+   ============================================ */
+.booking-cta {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(5rem, 10vw, 10rem) 0;
+}
+
+.booking-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.booking-cta-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.booking-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.92) 0%,
+    rgba(10, 10, 10, 0.85) 50%,
+    rgba(10, 10, 10, 0.92) 100%
+  );
+}
+
+/* Floating particles */
+.booking-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.booking-particle:nth-child(1) { top: 15%; left: 10%; animation: floatParticle 6s ease-in-out infinite; }
+.booking-particle:nth-child(2) { top: 25%; right: 15%; animation: floatParticle 8s ease-in-out infinite 1s; width: 6px; height: 6px; }
+.booking-particle:nth-child(3) { bottom: 20%; left: 20%; animation: floatParticle 7s ease-in-out infinite 2s; width: 3px; height: 3px; }
+.booking-particle:nth-child(4) { bottom: 30%; right: 10%; animation: floatParticle 9s ease-in-out infinite 0.5s; }
+.booking-particle:nth-child(5) { top: 50%; left: 50%; animation: floatParticle 10s ease-in-out infinite 3s; width: 5px; height: 5px; }
+.booking-particle:nth-child(6) { top: 40%; right: 30%; animation: floatParticle 11s ease-in-out infinite 1.5s; width: 3px; height: 3px; }
+
+@keyframes floatParticle {
+  0%, 100% { transform: translate(0, 0); opacity: 0.2; }
+  25% { transform: translate(20px, -30px); opacity: 0.6; }
+  50% { transform: translate(-10px, -50px); opacity: 0.4; }
+  75% { transform: translate(30px, -20px); opacity: 0.5; }
+}
+
+.booking-cta-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.booking-cta-content h2 {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.booking-cta-content > p {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.booking-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-whatsapp:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+}
+
+.btn-call {
+  background: transparent;
+  border: 1.5px solid var(--color-text-muted);
+  color: var(--color-text-primary);
+}
+
+.btn-call:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking-cta-buttons {
+    flex-direction: column;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .booking-particle {
+    display: none;
+  }
+}

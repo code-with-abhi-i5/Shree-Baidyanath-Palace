@@ -1,0 +1,243 @@
+/* ============================================
+   FACILITIES SECTION (Merged Premium Showcase)
+   ============================================ */
+.facilities {
+  background: var(--color-bg-secondary);
+}
+
+/* Sub-section Tabs */
+.facilities-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.facilities-tab {
+  padding: 0.75rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border-light);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.facilities-tab:hover {
+  color: var(--color-accent);
+  border-color: rgba(201, 165, 92, 0.3);
+}
+
+.facilities-tab.active {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+  color: var(--color-bg-primary);
+  border-color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Halls Grid */
+.halls-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.hall-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+}
+
+.hall-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-elevated);
+  border-color: rgba(201, 165, 92, 0.15);
+}
+
+.hall-card-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.hall-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.hall-card:hover .hall-card-image {
+  transform: scale(1.05);
+}
+
+.hall-card-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 1rem;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 165, 92, 0.3);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.hall-card-body {
+  padding: 1.5rem;
+}
+
+.hall-card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hall-card-body > p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.hall-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hall-feature-tag {
+  padding: 0.35rem 0.85rem;
+  background: rgba(201, 165, 92, 0.06);
+  border: 1px solid rgba(201, 165, 92, 0.12);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Rooms Grid */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.room-card {
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border-light);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.room-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+  border-color: rgba(201, 165, 92, 0.2);
+}
+
+.room-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.room-card-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+}
+
+.room-card-price-label {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  margin-bottom: 1.5rem;
+}
+
+.room-amenities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.room-amenity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.room-amenity-check {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.event-pill {
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.event-pill:hover {
+  border-color: rgba(201, 165, 92, 0.3);
+  background: rgba(201, 165, 92, 0.05);
+  color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.event-pill-icon {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .halls-grid,
+  .rooms-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .halls-grid,
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facilities-tabs {
+    gap: 0.35rem;
+  }
+
+  .facilities-tab {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.78rem;
+  }
+}
