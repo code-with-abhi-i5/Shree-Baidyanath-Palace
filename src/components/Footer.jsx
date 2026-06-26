@@ -87,13 +87,16 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div className="footer-copyright">
-            © {year} {RESORT_INFO.name}. All rights reserved.
-          </div>
-          <div className="footer-legal">
-            {FOOTER_LINKS.legal.map((item) => (
-              <a key={item} href="#">{item}</a>
-            ))}
+          <div className="footer-developer">
+            Designed &amp; Developed by{' '}
+            <a
+              href="https://abhijeetweb.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-developer-link"
+            >
+              Abhijeet Ghosh
+            </a>
           </div>
         </div>
       </div>

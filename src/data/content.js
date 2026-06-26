@@ -179,7 +179,7 @@ export const BOOKING_CTA = {
 export const FOOTER_LINKS = {
   quickLinks: ['Home', 'About', 'Services', 'Facilities', 'Gallery', 'Contact'],
   services: ['Weddings', 'Anniversary', 'Birthday', 'Room Stay', 'Dining', 'Events'],
-  legal: ['Privacy Policy', 'Terms & Conditions', 'Cancellation Policy'],
+  legal: [],
   socials: [
     { platform: 'Instagram', url: '#' },
     { platform: 'Facebook', url: '#' },
